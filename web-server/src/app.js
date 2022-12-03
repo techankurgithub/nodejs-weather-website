@@ -10,6 +10,7 @@ const viewsPath = path.join(__dirname, "/templates/views");
 const partialsPath = path.join(__dirname, "/templates/partials");
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 // for setting the app
 // for hbs pages should in the folder called "src/views" - this is the default path, but we can configure it
@@ -144,6 +145,6 @@ app.get("*", (req, res) => {
 // app.com/about
 
 // to start the server
-app.listen(3000, () => {
-  console.log("Server is up on Port : 3000");
+app.listen(port, () => {
+  console.log("Server is up on Port : " + port);
 });
